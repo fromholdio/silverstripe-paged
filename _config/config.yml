@@ -1,0 +1,6 @@
+---
+Name: fromholdio-paged
+---
+SilverStripe\ORM\PaginatedList:
+  extensions:
+    - Fromholdio\Paged\Extensions\PaginatedListExtension
