@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.1.1]
+
+- Null check on paged list in pagination abs links
+
 ## [1.1.0]
 
 - Add IsFirstPage to PaginatedList as companion to existing NotFirstPage
