@@ -85,4 +85,30 @@ class PagedControllerExtension extends Extension
 
         return (int) $limit;
     }
+
+    /**
+     * @return string|null
+     * Returns the absolute link to the next page for use in the
+     * page meta tags. This helps search engines find the pagination
+     * and index all pages properly.
+     * @example "<link rel="next" href="$PaginationAbsoluteNextLink">"
+     */
+    public function PaginationAbsoluteNextLink(): ?string
+    {
+        $pagedList = $this->getOwner()->getPagedList();
+        return ($pagedList->NotLastPage()) ? $pagedList->AbsoluteNextLink() : null;
+    }
+
+    /**
+     * @return string|null
+     * Returns the absolute link to the previous page for use in the
+     * page meta tags. This helps search engines find the pagination
+     * and index all pages properly.
+     * @example "<link rel="prev" href="$PaginationAbsolutePrevLink">"
+     */
+    public function PaginationAbsolutePrevLink(): ?string
+    {
+        $pagedList = $this->getOwner()->getPagedList();
+        return ($pagedList->NotFirstPage()) ? $pagedList->AbsolutePrevLink() : null;
+    }
 }
