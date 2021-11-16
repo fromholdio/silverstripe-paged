@@ -96,7 +96,7 @@ class PagedControllerExtension extends Extension
     public function PaginationAbsoluteNextLink(): ?string
     {
         $pagedList = $this->getOwner()->getPagedList();
-        return ($pagedList->NotLastPage()) ? $pagedList->AbsoluteNextLink() : null;
+        return (!is_null($pagedList) && $pagedList->NotLastPage()) ? $pagedList->AbsoluteNextLink() : null;
     }
 
     /**
@@ -109,6 +109,6 @@ class PagedControllerExtension extends Extension
     public function PaginationAbsolutePrevLink(): ?string
     {
         $pagedList = $this->getOwner()->getPagedList();
-        return ($pagedList->NotFirstPage()) ? $pagedList->AbsolutePrevLink() : null;
+        return (!is_null($pagedList) && $pagedList->NotFirstPage()) ? $pagedList->AbsolutePrevLink() : null;
     }
 }
