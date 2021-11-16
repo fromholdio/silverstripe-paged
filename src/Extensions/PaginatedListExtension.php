@@ -7,6 +7,11 @@ use SilverStripe\Core\Extension;
 
 class PaginatedListExtension extends Extension
 {
+    public function IsFirstPage(): bool
+    {
+        return !($this->getOwner()->NotFirstPage());
+    }
+
     public function AbsoluteNextLink()
     {
         if ($this->owner->NotLastPage()) {
