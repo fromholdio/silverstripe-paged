@@ -12,7 +12,7 @@ This module is really just a timesaver for otherwise repetitive and often used f
 
 ## Requirements
 
-* [silverstripe-framework](https://github.com/silverstripe/silverstripe-cms) ^4
+* [silverstripe-framework](https://github.com/silverstripe/silverstripe-cms) ^4 and ^5
 
 ## Installation
 
