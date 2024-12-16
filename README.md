@@ -3,6 +3,7 @@
 A small SilverStripe module that applies pagination functionalities to a `Controller` and its datalist/s.
 
 * Extends the core `PaginatedList` to also have `AbsoluteNextLink` and `AbsolutePrevLink` (in addition to regular `NextLink` and `PrevLink`)
+* Adds `PrevPageNum` and `NextPageNum` to `PaginatedList`
 * Adds (`int`) `PagedLimit` to the extended `Page`
 * Extends the `PageController` to get a `DataList`, wrap it in a `PaginatedList`, applies the `PagedLimit` and returns it
 
