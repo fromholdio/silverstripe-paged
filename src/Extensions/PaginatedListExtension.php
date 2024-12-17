@@ -19,6 +19,15 @@ class PaginatedListExtension extends Extension
                 $this->owner->NextLink()
             );
         }
+        return null;
+    }
+
+    public function NextPageNum()
+    {
+        if ($this->owner->NotLastPage()) {
+            return $this->owner->CurrentPage() + 1;
+        }
+        return null;
     }
 
     public function AbsolutePrevLink()
@@ -28,5 +37,14 @@ class PaginatedListExtension extends Extension
                 $this->owner->PrevLink()
             );
         }
+        return null;
+    }
+
+    public function PrevPageNum()
+    {
+        if ($this->owner->NotFirstPage()) {
+            return $this->owner->CurrentPage() - 1;
+        }
+        return null;
     }
 }
