@@ -3,7 +3,7 @@
 namespace Fromholdio\Paged\Extensions;
 
 use SilverStripe\Core\Extension;
-use SilverStripe\ORM\PaginatedList;
+use SilverStripe\Model\List\PaginatedList;
 
 class PagedControllerExtension extends Extension
 {

@@ -2,13 +2,13 @@
 
 namespace Fromholdio\Paged\Extensions;
 
-use SilverStripe\CMS\Model\SiteTreeExtension;
 use SilverStripe\Core\Config\Config;
+use SilverStripe\Core\Extension;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\FormField;
 use SilverStripe\Forms\NumericField;
 
-class PagedSiteTreeExtension extends SiteTreeExtension
+class PagedSiteTreeExtension extends Extension
 {
     private static $paged_limit_insert_after = 'MenuTitle';
 
